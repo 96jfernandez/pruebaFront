@@ -1,0 +1,44 @@
+<div>
+    <div *ngIf="finalU">
+        <h6>My user data</h6>
+        <div *ngFor="let data of user">
+            <li>username:{{data.username}}</li>
+            <li>name: {{data.name}}</li>
+            <li>password: {{data.password}}</li>
+            <li>role: {{data.role}}</li>
+            <div *ngIf="!show">
+                <li>country: {{data.country}}</li>
+                <li>description: {{data.description}}</li>
+                <button mat-button (click)="showEdit(data)">Edit</button>
+            </div>
+            <div *ngIf="show">
+                <input type="text" [(ngModel)]=item.country>
+                <input type="text" [(ngModel)]=item.description>
+                <button mat-button (click)="save()">Save</button>
+            </div>
+
+            <div></div>
+        </div>
+    </div>
+    <div *ngIf="admin || observe">
+        <h4>Users list</h4>
+        <div *ngFor="let data of users">
+            <div style="margin-bottom: 1vh;">
+
+                <div *ngIf="(username !== data.username )">
+                    <p>{{data.name}}</p>
+                    <p>country: {{data.country}}</p>
+                    <p>description: {{data.description}}</p>
+                    <button mat-button (click)="showEdit(data)" *ngIf="admin">Edit</button>
+                </div>
+
+                <div *ngIf="(username == data.username && admin )">
+                    <input type="text" [(ngModel)]=item.name>
+                    <input type="text" [(ngModel)]=item.country>
+                    <input type="text" [(ngModel)]=item.description>
+                    <button mat-button (click)="save()">Save</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

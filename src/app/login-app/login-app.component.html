@@ -1,0 +1,16 @@
+<mat-card style="height:auto; width: 150px;margin-top: 35vh; margin-left:38vw" >
+    
+    <form  #login = "ngForm" (ngSubmit) = "onClickSubmit(login.value)">
+    <div fxLayout="column" fxLayoutAlign="space-between center">
+        <h1>Login</h1>
+    <div fxFlex="5">
+        <input name="username" placeholder="UserName" style='width: 100%;margin-bottom: 5px;' required autofocus ngModel>
+    </div>
+    <div fxFlex="5">
+        <input type="password" name="password"  placeholder="Password" style='width: 100%;' required ngModel>
+    </div>
+    <button mat-button type="submit"> enter</button>
+    </div>
+    </form>
+
+</mat-card>
