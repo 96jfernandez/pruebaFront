@@ -1,20 +1,18 @@
-/* @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700);
 
 body {
   background: #456;
   font-family: 'Open Sans', sans-serif;
 }
 
-.home {
-  margin: 16px auto;
-  font-size: 16px;
-}
+
 
 
 .header {
-  margin-top: 5vh !important;
+  border-radius: 3px;
   margin-bottom: 0;
   font-size: 16px;
+  background: #28d;
 }
 
 .login-triangle {
@@ -26,12 +24,10 @@ body {
 }
 
 .home {
-  background: #28d;
-  padding: 20px;
-  font-size: 1.4em;
+  margin: 12px;
+  font-size: 16px;
   font-weight: normal;
   text-align: center;
-  text-transform: uppercase;
   color: #fff;
 }
 
@@ -59,13 +55,15 @@ body {
 button {
   box-sizing: border-box;
   display: block;
-  width: 100%;
+  width: auto;
   border-width: 1px;
   border-style: solid;
-  padding: 16px;
+  padding: 9px;
   outline: 0;
+  margin: 10px;
   font-family: inherit;
-  font-size: 0.95em;
+  font-size: 12px;
+ 
 }
 
 .login input[type="email"],
@@ -95,4 +93,4 @@ button:hover {
 
 button :focus {
   border-color: rgb(108, 180, 251);
-} */
+}

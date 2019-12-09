@@ -1,4 +1,4 @@
-/* @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700);
 
 body {
   background: #456;
@@ -95,4 +95,4 @@ form {
 
 .login button[type="submit"]:focus {
   border-color: #05a;
-} */
+}

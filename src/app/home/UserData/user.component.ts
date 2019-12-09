@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { DataService } from '../../data.service';
 import { LoginService } from '../../login.service';
+import { faEdit } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'user',
@@ -8,6 +9,7 @@ import { LoginService } from '../../login.service';
   styleUrls: ['./user.component.css']
 })
 export class UserComponent implements OnInit {
+  faEdit = faEdit;
   role:any;
   data:any=[];
   user:any=[];
@@ -15,11 +17,11 @@ export class UserComponent implements OnInit {
   admin=false;
   finalU=false;
   observe=false;
-  show=false;
+  button:boolean;
   username:any;
-  buttonName="Edit";
-  
   item:any;
+  displayedColumns: string[] = [ 'name', 'country', 'description', "action"];
+  dataSource =this.users;
   constructor(private myService: DataService,private loginservice: LoginService) { }
 
   ngOnInit() {
@@ -32,21 +34,31 @@ export class UserComponent implements OnInit {
   mostrarData(){
     this.myService.getData().subscribe(res => {
       this.data = res;
-      this.users=this.data.data;
+      this.dataSource=this.data.data;
      this.userData();
+     this.disableObserve();
+    
     }
       );
     
   }
+
+  disableObserve(){
+    if(this.role=="ADMINISTRATOR"){
+      this.button=false
+    }else{
+      this.button=true
+    }
+  }
   showEdit(fuser){
     this.item=fuser
     this.username=fuser.username
-    this.show = true
+   
 
    
   }
   save(){
-   this.show=false
+   
     this.username=""
   
   }

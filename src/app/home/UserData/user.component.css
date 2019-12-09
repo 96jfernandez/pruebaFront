@@ -1,5 +1,48 @@
-p {
-    margin-top: 0;
-    margin-bottom: 5px;
-    font-size: 13px;
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700);
+
+button {
+  box-sizing: border-box;
+  display: block;
+  width: auto;
+  border-width: 1px;
+  border-style: solid;
+  outline: 0;
+  font-family: inherit;
+  font-size: 12px;
+ 
 }
+
+ button {
+  background: rgb(241, 241, 241);
+  border-color: transparent;
+  color: rgb(5, 11, 15);
+  cursor: pointer;
+  
+}
+
+button:hover {
+  background: rgb(133, 200, 255);
+}
+
+
+button :focus {
+  border-color: rgb(108, 180, 251);
+}
+
+/* .mat-form-field {
+    height: 6vh;
+    margin-top: -10px;
+} */
+.mat-table {
+    background: #fff;
+    width: 100%;
+    margin-top: 4vh;
+}
+.mat-button{
+    min-width: 50px;
+}
+
+p{
+    margin-bottom: auto;
+}
+ 

@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
-import { MatCardModule, MatIconModule, MatToolbarModule, MatButtonModule, MatFormFieldModule, MatInputModule } from '@angular/material';
+import { MatCardModule, MatIconModule, MatToolbarModule, MatButtonModule, MatFormFieldModule, MatInputModule,MatTableModule } from '@angular/material';
 import { LoginAppComponent } from './login-app/login-app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FlexLayoutModule } from "@angular/flex-layout";
@@ -11,6 +11,8 @@ import {UserComponent} from './home/UserData/user.component'
 import { FormsModule }   from '@angular/forms';
 import { Route, RouterModule } from '@angular/router';
 import { AuthGuard } from './auth.guard';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+
 
 const routes: Route[] = [
   {
@@ -46,8 +48,10 @@ const routes: Route[] = [
     MatFormFieldModule,
     MatInputModule,
     FlexLayoutModule,
+    MatTableModule,
     FormsModule,
     RouterModule.forRoot(routes),
+    FontAwesomeModule ,
      
 
   ],

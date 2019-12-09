@@ -30,20 +30,24 @@ export class LoginService  {
             return item.username == formData.username && item.password == formData.password
         })
         
-       
-
+       if(formData.username !== "" && formData.password !== ""){
+         
         if (this.user[0] !== undefined) {
             localStorage.setItem('isLoggedIn', 'true');
              localStorage.setItem('username', this.user[0].username);
              localStorage.setItem('role', this.user[0].role);
             this.router.navigate(['/Home']);
-            console.log('usuario encontrado')
+           
         }  else{
              this.router.navigate(['/']);
              alert('usuario/contraseña invalidos')
             localStorage.setItem('isLoggedIn', 'false');
            
         }
+        }else{
+            alert('Debe ingresar usuario y contraseña')
+        }
+
 
     }
 
